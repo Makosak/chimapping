@@ -1,6 +1,30 @@
-<h1>About</h1>
-<p>
-  This is the sample application for 
-  <%= link_to "Chicago Mapping", "http://chimapping.com" %>
-  : a project to curate Second City cartography.
-</p>
+<!DOCTYPE html>
+<h2>This is a dev page.</h2><p>
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCGPuWuV7JmRWYlfCWtSuEsjwnhDw1Dg8Q">
+</script>
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(41.925756, -87.631905),
+  zoom:9,
+  mapTypeId:google.maps.MapTypeId.TERRAIN
+  };
+var map=new google.maps.Map(document.getElementById("googleMap")
+  ,mapProp);
+}
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googleMap" style="width:900px;height:480px;"></div>
+
+
+
+</body>
+</html>

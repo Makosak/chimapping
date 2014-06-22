@@ -1,6 +1,11 @@
+
+
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
-$btnPrimaryBackground: purple;
+$btnPrimaryBackground: green;
+
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
 
 @import 'bootstrap';
 body{
@@ -10,6 +15,7 @@ body{
 @import 'bootstrap-responsive';
 
 .navbar .navbar-inner {
+	@include box-shadow(none !important);
 border: 0;
 }
 
